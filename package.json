@@ -1,0 +1,17 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "一本让你学会怎么看一门语言的书",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": ["programming", "languages", "book"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
