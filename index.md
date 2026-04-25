@@ -1,5 +1,10 @@
 ---
 layout: home
+head:
+  - - script
+    - {}
+    - |
+      document.documentElement.classList.add('is-home');
 hero:
   name: "8门语言"
   text: 一本让你学会<br>"怎么看一门语言"的书

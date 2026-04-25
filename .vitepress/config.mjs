@@ -7,7 +7,6 @@ export default defineConfig({
   base: '/8-languages/',
   lastUpdated: true,
   cleanUrls: true,
-  appearance: 'dark',
 
   themeConfig: {
     nav: [
