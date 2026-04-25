@@ -82,12 +82,14 @@
   margin: 0;
 }
 
-/* ===== 表格美化 ===== */
+/* ===== 表格美化 + 宽表横向滚动 ===== */
 .vp-doc table {
+  display: block;
   width: 100%;
+  overflow-x: auto;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border-collapse: collapse;
 }
 
 .vp-doc thead {
@@ -96,13 +98,34 @@
 
 .vp-doc th {
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  padding: 0.65rem 0.85rem;
+  white-space: nowrap;
 }
 
 .vp-doc td {
-  padding: 0.6rem 1rem;
-  font-size: 0.88rem;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* 给窄屏一个提示：表格可左右滑动 */
+.vp-doc table::after {
+  content: "";
+}
+
+/* 表格第一列（通常是概念名）允许换行 */
+.vp-doc td:first-child {
+  white-space: normal;
+  min-width: 100px;
+  max-width: 180px;
+}
+
+/* 序号列保持窄 */
+.vp-doc td:first-child:has(> strong) {
+  white-space: nowrap;
+  min-width: auto;
+  max-width: none;
 }
 
 /* ===== 代码块 ===== */
